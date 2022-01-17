@@ -1,0 +1,44 @@
+{
+  "name": "test-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts-node": "ts-node -r tsconfig-paths/register --files index.ts",
+    "test": "jest --detectOpenHandles --forceExit"
+  },
+  "_moduleAliases": {
+    "@": "./src",
+    "@utils": "./src/utils",
+    "@json": "./src/json"
+  },
+  "jest": {
+    "transtorm": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "\\.test\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": true
+      }
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7",
+    "lodash": "^4.17.21",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.4"
+  }
+}
