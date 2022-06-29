@@ -1,15 +1,19 @@
+// import { data } from '@/json/data.json';
+
 import { compareKeys, getSum } from '@utils/arrayUtil';
-import { difference } from '@utils/objectUtil';
+import { isEmpty, isNil } from 'lodash';
+import { difference } from '@/utils/objectUtil';
+import { detailData, tableArr } from './dir/76684_pm';
 
-import Data from './json/data.json';
+// 2022-06-29 / PM 관리 더미 데이터들
+console.log({ tableArr });
+console.log({ detailData });
 
-const originDatas = Data.originDatas;
+const testFunction = (arr: number[]) => {
+  const newArr = arr.map((i) => i + 100);
+  return newArr;
+};
 
-const nextDatas = Data.nextDatas;
-console.log(originDatas[0]);
-console.log(nextDatas[0]);
+const testArr = Array.from(Array(9), (_, i) => i);
 
-console.log(difference(nextDatas[8], originDatas[8]));
-
-const updatedList = nextDatas.filter((i) => i.dirty !== undefined);
-console.log(updatedList.length);
+testFunction(testArr);

@@ -5,7 +5,7 @@
  *
  * @return  {boolean}        [return description]
  */
-export const compareKeys = (arr: Array<{}>): boolean => {
+export const compareKeys = (arr: object[]): boolean => {
   if (arr === undefined || arr === null || arr.length < 2) return null;
 
   let result = false;
@@ -33,5 +33,5 @@ export const compareKeys = (arr: Array<{}>): boolean => {
  *
  * @return  {<number>}            [return description]
  */
-export const getSum = (arr: Array<number>): number =>
+export const getSum = (arr: number[]): number =>
   arr.reduce((sum, cur) => (sum += cur), 0);

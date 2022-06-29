@@ -1,0 +1,23 @@
+@baseurl = http://192.168.121.133:3333/applemango
+
+
+### test api
+GET {{baseurl}}/login/check.do
+
+### test post
+POST {{baseurl}}/dashboard/grid/widget/get-event-status-by-level.do
+Content-Type: application/json
+Accept: application/json
+Cookie: JSESSIONID = 8729E260B8AC9FE0B1FAAB15005220C0
+Host: 192.168.121.133:3333
+
+{
+    "viewType": "radar",
+    "limit": 10,
+    "managegroupIds": [],
+    "managetypeIds": [
+        "SMS"
+    ],
+    "managetypeTotal": false,
+    "managegroupTotal": true
+}
